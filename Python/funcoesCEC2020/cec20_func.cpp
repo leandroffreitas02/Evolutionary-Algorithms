@@ -28,6 +28,7 @@ int ini_flag=0,n_flag,func_flag,*SS;
 #define E  2.7182818284590452353602874713526625
 #define PI 3.1415926535897932384626433832795029
 
+extern "C" {
 void sphere_func (double *, double *, int , double *,double *, int, int); /* Sphere */
 void ellips_func(double *, double *, int , double *,double *, int, int); /* Ellipsoidal */
 void bent_cigar_func(double *, double *, int , double *,double *, int, int); /* Discus */
@@ -43,7 +44,7 @@ void schwefel_func (double *, double *, int , double *,double *, int, int); /* S
 void katsuura_func (double *, double *, int , double *,double *, int, int); /* Katsuura */
 void bi_rastrigin_func (double *, double *, int , double *,double *, int, int); /* Lunacek Bi_rastrigin */
 void grie_rosen_func (double *, double *, int , double *,double *, int, int); /* Griewank-Rosenbrock  */
-void escaffer6_func (double *, double *, int , double *,double *, int, int); /* Expanded Scaffer¡¯s F6  */
+void escaffer6_func (double *, double *, int , double *,double *, int, int); /* Expanded Scafferï¿½ï¿½s F6  */
 void step_rastrigin_func (double *, double *, int , double *,double *, int, int); /* Noncontinuous Rastrigin's  */
 void happycat_func (double *, double *, int , double *,double *, int, int); /* HappyCat */
 void hgbat_func (double *, double *, int , double *,double *, int, int); /* HGBat  */
@@ -83,6 +84,7 @@ void asyfunc (double *, double *x, int, double);
 void oszfunc (double *, double *, int);
 void cf_cal(double *, double *, int, double *,double *,double *,double *,int);
 void cec20_test_func(double *, double *,int,int,int);
+}
 
 void mexFunction (int nlhs, mxArray * plhs[], int nrhs, const mxArray * prhs[]) 
 {
@@ -837,7 +839,7 @@ void grie_rosen_func (double *x, double *f, int nx, double *Os,double *Mr,int s_
 }
 
 
-void escaffer6_func (double *x, double *f, int nx, double *Os,double *Mr,int s_flag, int r_flag) /* Expanded Scaffer¡¯s F6  */
+void escaffer6_func (double *x, double *f, int nx, double *Os,double *Mr,int s_flag, int r_flag) /* Expanded Scafferï¿½ï¿½s F6  */
 {
     int i;
     double temp1, temp2;
