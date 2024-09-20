@@ -29,7 +29,6 @@ elseif fun==4  % rotated Rastrigin function
 elseif fun==5  % rotated Ackley function
     z = Q*x;
     cz = cos(2*pi*z);
-    disp(cz)
     y = -20*exp(-0.2*sqrt(z'*z/n)) - exp(sum(cz)/n) + 20 + exp(1);
 elseif fun==6  % Schwefel function
     y = 0;

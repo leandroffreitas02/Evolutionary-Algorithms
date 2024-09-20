@@ -28,7 +28,6 @@ int ini_flag=0,n_flag,func_flag,*SS;
 #define E  2.7182818284590452353602874713526625
 #define PI 3.1415926535897932384626433832795029
 
-extern "C" {
 void sphere_func (double *, double *, int , double *,double *, int, int); /* Sphere */
 void ellips_func(double *, double *, int , double *,double *, int, int); /* Ellipsoidal */
 void bent_cigar_func(double *, double *, int , double *,double *, int, int); /* Discus */
@@ -84,7 +83,6 @@ void asyfunc (double *, double *x, int, double);
 void oszfunc (double *, double *, int);
 void cf_cal(double *, double *, int, double *,double *,double *,double *,int);
 void cec20_test_func(double *, double *,int,int,int);
-}
 
 void mexFunction (int nlhs, mxArray * plhs[], int nrhs, const mxArray * prhs[]) 
 {
